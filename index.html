@@ -21,34 +21,13 @@
 
 <body>
   <div class="background">
-    <!-- <div
-        class="bubble bubble-animate blue-bg"
-        style="right: -70vh; width: 100vh; height: 100vh;"
-      ></div>
-      <div
-        class="bubble bubble-animate orange-bg"
-        style="left: 10vh; width: 20vh; height: 20vh;"
-      ></div>
-      <div
-        class="bubble bubble-animate pink-bg"
-        style="left: 20vh; bottom: 30vh; width: 10vh; height: 10vh;"
-      ></div>
-      <div
-        class="bubble bubble-animate light-bg"
-        style="left: 25vh; bottom: 20vh; width: 5vh; height: 5vh;"
-      ></div>
-      <div
-        class="bubble bubble-animate light-bg"
-        style="left: 15vh; bottom: 5vh; width: 5vh; height: 5vh;"
-      ></div>
-      <div
-        class="bubble bubble-animate light-bg"
-        style="left: 105vh; bottom: 20vh; width: 25vh; height: 25vh;"
-      ></div>
-      <div
-        class="bubble bubble-animate pink-bg"
-        style="left: 55vh; bottom: -10vh; width: 25vh; height: 25vh;"
-      ></div> -->
+    <div class="bubble bubble-animate blue-bg" style="right: -70vh; width: 100vh; height: 100vh;"></div>
+    <div class="bubble bubble-animate orange-bg" style="left: 10vh; width: 20vh; height: 20vh;"></div>
+    <div class="bubble bubble-animate pink-bg" style="left: 20vh; bottom: 30vh; width: 10vh; height: 10vh;"></div>
+    <div class="bubble bubble-animate light-bg" style="left: 25vh; bottom: 20vh; width: 5vh; height: 5vh;"></div>
+    <div class="bubble bubble-animate light-bg" style="left: 15vh; bottom: 5vh; width: 5vh; height: 5vh;"></div>
+    <div class="bubble bubble-animate light-bg" style="left: 105vh; bottom: 20vh; width: 25vh; height: 25vh;"></div>
+    <div class="bubble bubble-animate pink-bg" style="left: 55vh; bottom: -10vh; width: 25vh; height: 25vh;"></div>
   </div>
   <nav class="navbar navbar-expand-md navbar-light bg-light shadow-lg fixed-top">
     <h3 class="title-name">Gomathi J</h3>
@@ -117,9 +96,9 @@
           style="font-size: 1.5em;">
           Projects
         </button>
-        <a href="resources/resume/Gomathi-resume.pdf" download="Resume.pdf" style="margin-left: 3em;"><button type="button"
-            class="btn purple-grad-bg light-cl pop-in" style="font-size: 1.5em;">
-            <i class="fas fa-download"></i>Resume
+        <a href="https://unruffled-hermann-afb502.netlify.app/" style="margin-left: 3em;" target="_blank"><button
+            type="button" class="btn purple-grad-bg light-cl pop-in" style="font-size: 1.5em;">
+            Resume
           </button></a>
       </div>
     </div>
@@ -128,7 +107,47 @@
   </template>
   <!-- projects -->
   <template class="a">
+    <div class="row px-5">
+      <div class="col">
+        <button class="btn purple-grad-bg light-cl pop-in ml-3 mb-3" type="button" onclick="showAllProj()">
+          All
+        </button>
+        <button class="btn purple-grad-bg light-cl pop-in ml-3 mb-3" type="button" onclick="showFS()">
+          Full Stack
+        </button>
+        <button class="btn purple-grad-bg light-cl pop-in ml-3 mb-3" type="button" onclick="showFE()">
+          Front End
+        </button>
+      </div>
+    </div>
     <div class="row p-md-5">
+      <div class="col-md-6 mb-3 pop-in proj fs">
+        <div class="card p-3 light-bg shadow-lg" style="height: 100%;">
+          <img class="card-img-top" src="resources/imgs/instagram.jpg" alt="Card image cap" height=320px />
+          <div class="card-body d-flex flex-column pb-0">
+            <h4 class="card-title">Instagram Clone</h4>
+            <p class="card-text">
+              A social media app similar to Instagram.</p>
+            <h4>Tech stack :</h4>
+            <div style="display: flex; padding-bottom: 7px;">
+              <img src="resources/icons/react.png" alt="angular" class="tec-small" />
+              <img src="resources/icons/mat_ui.png" alt="angular" class="tec-small" />
+              <img src="./resources/icons/nodejs.png" alt="angular" class="tec-small" />
+              <img src="./resources/icons/mongo_other.png" alt="angular" class="tec-small" />
+            </div>
+            <a href="https://eloquent-tesla-335164.netlify.app/" class="btn blue-bg light-cl mt-auto"
+              target="_blank">View Project</a>
+            <div class="d-flex justify-content-around mt-1">
+              <a href="https://github.com/Gomathi-Janakiram/Instagram_clone_frontend"
+                class="btn dark-bg light-cl mt-auto" target="_blank"><i class="fab fa-github"></i>Front End Code</a>
+              <a href="https://github.com/Gomathi-Janakiram/Instagram_clone_backend"
+                class="btn dark-bg light-cl mt-auto" target="_blank"><i class="fab fa-github"></i>Back End Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="col-md-6 mb-3 pop-in proj fs">
         <div class="card p-3 light-bg shadow-lg" style="height: 100%;">
           <img class="card-img-top" src="resources/imgs/money_manager.jpg" alt="Card image cap" height=320px />
@@ -156,32 +175,33 @@
         </div>
       </div>
 
-      
-        <div class="col-md-6 mb-3 pop-in proj fe">
-          <div class="card p-3 light-bg shadow-lg" style="height: 100%;">
-            <img class="card-img-top" src="resources/imgs/instagram.jpg" alt="Card image cap" height=320px />
-            <div class="card-body d-flex flex-column pb-0">
-              <h4 class="card-title">Instagram Clone</h4>
-              <p class="card-text">
-                A social media app similar to Instagram.</p>
-              <h4>Tech stack :</h4>
-              <div style="display: flex; padding-bottom: 7px;">
-                <img src="resources/icons/react.png" alt="angular" class="tec-small" />
-                <img src="resources/icons/mat_ui.png" alt="angular" class="tec-small" />
-                <img src="./resources/icons/nodejs.png" alt="angular" class="tec-small" />
-                <img src="./resources/icons/mongo_other.png" alt="angular" class="tec-small" />
-              </div>
-              <a href="https://eloquent-tesla-335164.netlify.app/" class="btn blue-bg light-cl mt-auto"
-                target="_blank">View Project</a>
-              <div class="d-flex justify-content-around mt-1">
-                <a href="https://github.com/Gomathi-Janakiram/Instagram_clone_frontend" class="btn dark-bg light-cl mt-auto"
-                  target="_blank"><i class="fab fa-github"></i>Front End Code</a>
-                <a href="https://github.com/Gomathi-Janakiram/Instagram_clone_backend" class="btn dark-bg light-cl mt-auto"
-                  target="_blank"><i class="fab fa-github"></i>Back End Code</a>
-              </div>
+
+
+      <div class="col-md-6 mb-3 pop-in proj fs">
+        <div class="card p-3 light-bg shadow-lg" style="height: 100%;">
+          <img class="card-img-top" src="resources/imgs/contact-keeper.jpg" alt="Card image cap" height=320px />
+          <div class="card-body d-flex flex-column pb-0">
+            <h4 class="card-title">Contact-Keeper</h4>
+            <p class="card-text">
+              Keep Track of your Contacts</p>
+            <h4>Tech stack :</h4>
+            <div style="display: flex; padding-bottom: 7px;">
+              <img src="resources/icons/react.png" alt="angular" class="tec-small" />
+              <img src="resources/icons/mat_ui.png" alt="angular" class="tec-small" />
+              <img src="./resources/icons/nodejs.png" alt="angular" class="tec-small" />
+              <img src="./resources/icons/mongo_other.png" alt="angular" class="tec-small" />
+            </div>
+            <a href="https://contact-keeper-07.netlify.app/" class="btn blue-bg light-cl mt-auto" target="_blank">View
+              Project</a>
+            <div class="d-flex justify-content-around mt-1">
+              <a href="https://github.com/Gomathi-Janakiram/Contact_Keeper-FrontEnd"
+                class="btn dark-bg light-cl mt-auto" target="_blank"><i class="fab fa-github"></i>Front End Code</a>
+              <a href="https://github.com/Gomathi-Janakiram/Contact_Keeper-BackEnd" class="btn dark-bg light-cl mt-auto"
+                target="_blank"><i class="fab fa-github"></i>Back End Code</a>
             </div>
           </div>
         </div>
+      </div>
 
       <div class="col-md-6 mb-3 pop-in proj fe">
         <div class="card p-3 light-bg shadow-lg" style="height: 100%;">
@@ -197,11 +217,11 @@
               <img src="resources/icons/react.png" alt="angular" class="tec-small" />
               <img src="resources/icons/mat_ui.png" alt="angular" class="tec-small" />
             </div>
-            <a href="https://commercejs-mystore.netlify.app/" class="btn blue-bg light-cl mt-auto"
-              target="_blank">View Project</a>
+            <a href="https://commercejs-mystore.netlify.app/" class="btn blue-bg light-cl mt-auto" target="_blank">View
+              Project</a>
             <div class="d-flex justify-content-around mt-1">
-              <a href="https://github.com/Gomathi-Janakiram/E-Commerce-React"
-                class="btn dark-bg light-cl mt-auto" target="_blank"><i class="fab fa-github"></i>View Code</a>
+              <a href="https://github.com/Gomathi-Janakiram/E-Commerce-React" class="btn dark-bg light-cl mt-auto"
+                target="_blank"><i class="fab fa-github"></i>View Code</a>
             </div>
           </div>
         </div>
@@ -236,7 +256,7 @@
           <div class="card-body d-flex flex-column pb-0">
             <h4 class="card-title">Recipe Search App</h4>
             <p class="card-text">
-              A Recipe seaech app implementation with Edamam api
+              A Recipe search app implementation with Edamam api
             </p>
             <h4>Tech stack :</h4>
             <div style="display: flex; padding-bottom: 7px;">
@@ -244,8 +264,8 @@
               <img src="./resources/icons/html.png" alt="angular" class="tec-small" />
               <img src="./resources/icons/bootstrap.png" alt="angular" class="tec-small" />
             </div>
-            <a href="https://recipee-search.netlify.app/" class="btn blue-bg light-cl mt-auto"
-              target="_blank">View Project</a>
+            <a href="https://recipee-search.netlify.app/" class="btn blue-bg light-cl mt-auto" target="_blank">View
+              Project</a>
             <div class="d-flex justify-content-around mt-1">
               <a href="https://github.com/Gomathi-Janakiram/Guvi/tree/main/Assignments/Weakend_Assessment-2/Recipe_Search"
                 class="btn dark-bg light-cl mt-auto" target="_blank"><i class="fab fa-github"></i>View Code</a>
@@ -271,16 +291,16 @@
             <a href="https://gracious-ptolemy-986850.netlify.app/" class="btn blue-bg light-cl mt-auto"
               target="_blank">View Project</a>
             <div class="d-flex justify-content-around mt-1">
-              <a href="https://github.com/Gomathi-Janakiram/Landing_Page"
-                class="btn dark-bg light-cl mt-auto" target="_blank"><i class="fab fa-github"></i>View Code</a>
+              <a href="https://github.com/Gomathi-Janakiram/Landing_Page" class="btn dark-bg light-cl mt-auto"
+                target="_blank"><i class="fab fa-github"></i>View Code</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    
-  </div>
+
+    </div>
   </template>
   <!-- skills -->
   <template>
@@ -416,7 +436,8 @@
           <li class="slide-in h4 p-3 first-bg m-2 rounded shadow">
             <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
             Applied Text Mining in Python from Coursera-
-              <a href="https://www.coursera.org/account/accomplishments/certificate/QELCF7FB92DN" target="_blank">View Certificate</a>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/QELCF7FB92DN" target="_blank">View
+              Certificate</a>
           </li>
         </ul>
       </div>
